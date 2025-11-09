@@ -1,0 +1,100 @@
+### gitignore file
+
+# ---------------------------
+# Python
+# ---------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dll
+
+# Virtual environments
+.venv/
+venv/
+env/
+*.env
+*.venv
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Jupytext backup files
+*.py.ipynb
+
+# Logs and caches
+*.log
+*.out
+*.err
+.cache/
+*.pickle
+*.joblib
+.DS_Store
+
+# Data files (optional – comment out if you want to track raw data)
+*.csv
+*.tsv
+*.parquet
+*.h5
+*.db
+*.sqlite
+*.xlsx
+*.json
+
+# but keep sample_movies.csv
+!sample_movies.csv
+
+# ---------------------------
+# PyCharm / JetBrains
+# ---------------------------
+.idea/*
+# But keep shared configs (code styles, run configs, inspections)
+!.idea/codeStyles
+!.idea/runConfigurations
+!.idea/inspectionProfiles
+
+# ---------------------------
+# Testing
+# ---------------------------
+.coverage
+coverage.xml
+.pytest_cache/
+
+# ---------------------------
+# Environment management
+# ---------------------------
+# Conda
+*.conda
+*.yml.lock
+
+# Pipenv
+Pipfile.lock
+
+# ---------------------------
+# Other
+# ---------------------------
+# VS Code (in case someone opens in VS Code)
+.vscode/
+
+# ignore pdf files
+*.pdf
+
+# do not ignore .png files
+!*.png
+
+# ignore all hidden files
+.*
+
+# do not ignore streamlit config.toml
+!.streamlit/
+
+# do not ignore .gitignore
+!.gitignore
+# do not ignore .keep (used to track empty directories with git)
+!.keep

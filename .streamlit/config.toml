@@ -1,0 +1,9 @@
+# .streamlit/config.toml
+
+[theme]
+base="dark"
+primaryColor="#FFA500"              # accent (e.g., IMDb/Letterboxd-style yellow)
+backgroundColor="#1E1E1E"           # page background (matches your CSS)
+secondaryBackgroundColor="#2B2B2B"  # sidebar + widget backgrounds
+textColor="#F0F0F0"                 # light gray text
+font="sans serif"
