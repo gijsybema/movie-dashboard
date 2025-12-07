@@ -1,6 +1,6 @@
 # Movie dashboard
-I built this Streamlit dashboard to explore my movie-watching habits — showing insights by genre, country, and director.  
-This public version showcases the data workflow and visualization components using example data
+I built this Streamlit dashboard to explore my movie-watching habits — showing insights by genre, country, and crew.  
+This public version showcases the data workflow and visualization components using example data.
 
 ## Project Overview
 This project demonstrates how to build a data visualization dashboard with Python and Streamlit.  

@@ -22,9 +22,9 @@ def adjust_color(color, factor):
 def show_colorscale(base_color):
     """Display generated 3-step colorscale for a single base color."""
     colors = [
-        adjust_color(base_color, 1.5),  # lighter
+        adjust_color(base_color, 0.75),  # darker
         base_color,                     # original
-        adjust_color(base_color, 0.5)   # darker
+        adjust_color(base_color, 1.25)   # lighter
     ]
 
     fig = go.Figure(
@@ -39,7 +39,7 @@ def show_colorscale(base_color):
         xaxis=dict(showticklabels=False),
         yaxis=dict(showticklabels=False)
     )
-    fig.show()
+    return fig
 
 
 def plot_bar(df, x_col, y_col, title="", orientation="h", top_n=None
@@ -173,7 +173,7 @@ def plot_map(df, country_col, y_col, title="", color=None):
     if color is None:
         color = ["#FFD580", "#FFA500", "#FF7F00"]
 
-    # If user provides a single color string, turn it into a 2-color scale
+    # If user provides a single color string, turn it into a 3-color scale
     elif (isinstance(color, str)
           and color.startswith("#") and len(color) in [4, 7]
           and not color.lower() in px.colors.named_colorscales()):
@@ -233,7 +233,11 @@ def plot_map(df, country_col, y_col, title="", color=None):
 if __name__ == "__main__":
 
     base_color = "#FFA500"
-    #show_colorscale(base_color)
+    fig_colorscale = show_colorscale(base_color)
+    #fig_colorscale.show()
+    #fig_colorscale.write_image("fig1_colorscale.png")
+
+    #exit()
 
     # set colors
     orange = "#FFA500"
